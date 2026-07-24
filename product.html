@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmic Nomad Graphic Tee | Purple Pain Productions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Manrope:wght@400&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#6a6672",
+                        "on-primary-container": "#f2e3ff",
+                        "primary-fixed-dim": "#d8b9ff",
+                        "on-tertiary": "#322f39",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-background": "#e2e2e2",
+                        "surface-bright": "#37393a",
+                        "error": "#ffb4ab",
+                        "primary": "#d8b9ff",
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary": "#450086",
+                        "on-tertiary-fixed": "#1c1a24",
+                        "primary-fixed": "#eddcff",
+                        "secondary-container": "#ff4b89",
+                        "surface-variant": "#333535",
+                        "on-secondary": "#66002c",
+                        "on-secondary-fixed": "#3f0019",
+                        "on-surface-variant": "#cec2d8",
+                        "surface": "#121414",
+                        "surface-dim": "#121414",
+                        "surface-container-low": "#1a1c1c",
+                        "tertiary": "#cac4d1",
+                        "surface-container": "#1e2020",
+                        "secondary-fixed-dim": "#ffb1c3",
+                        "secondary-fixed": "#ffd9e0",
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#8f0041",
+                        "background": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#ece5f3",
+                        "on-error": "#690005",
+                        "secondary": "#ffb1c3",
+                        "surface-container-highest": "#333535",
+                        "inverse-primary": "#8018ea",
+                        "tertiary-fixed-dim": "#cac4d1",
+                        "on-primary-fixed": "#290055",
+                        "outline-variant": "#4c4355",
+                        "surface-container-high": "#282a2b",
+                        "on-primary-fixed-variant": "#6300bb",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#484550",
+                        "tertiary-fixed": "#e6e0ee",
+                        "surface-tint": "#d8b9ff",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#590026",
+                        "primary-container": "#8b2cf5",
+                        "outline": "#978da1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "code-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["JetBrains Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            overflow-x: hidden;
+        }
+        
+        .cosmic-nebula {
+            position: fixed;
+            top: 20%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(139,44,245,0.15) 0%, rgba(18,20,20,0) 70%);
+            filter: blur(120px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .cosmic-nebula-alt {
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(255,75,137,0.1) 0%, rgba(18,20,20,0) 70%);
+            filter: blur(100px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .glass-panel {
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .luminous-shadow {
+            box-shadow: 0 0 40px rgba(216, 185, 255, 0.15);
+        }
+
+        .btn-primary-glow {
+            box-shadow: 0 0 20px rgba(139, 44, 245, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-glow:hover {
+            box-shadow: 0 0 30px rgba(255, 75, 137, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        .radio-chip:checked + label {
+            border-color: theme('colors.primary');
+            background-color: rgba(216, 185, 255, 0.1);
+            color: theme('colors.primary');
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative">
+<!-- Decorative Background -->
+<div class="cosmic-nebula"></div>
+<div class="cosmic-nebula-alt"></div>
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface/80 backdrop-blur-3xl border-b border-outline-variant/30 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out md:px-margin-desktop px-margin-mobile">
+<a class="font-headline-md text-headline-md font-bold text-primary drop-shadow-[0_0_8px_rgba(216,185,255,0.6)]" href="#">
+            Purple Pain Productions
+        </a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Apparel</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Games</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Music</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Gallery</a>
+</nav>
+<div class="flex items-center gap-stack-md text-primary dark:text-primary-fixed-dim">
+<button class="hover:bg-white/5 hover:backdrop-blur-lg p-2 rounded-full transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="hover:bg-white/5 hover:backdrop-blur-lg p-2 rounded-full transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col gap-section-gap">
+<!-- Product Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Product Imagery (Left) -->
+<div class="lg:col-span-7 relative group">
+<div class="glass-panel rounded-xl overflow-hidden luminous-shadow relative aspect-[4/5] lg:aspect-square flex items-center justify-center">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 z-0" data-alt="A highly detailed, ultra-high-resolution product shot of a black oversized graphic t-shirt featuring a surreal, glowing purple astronaut floating in a dark cosmic nebula. The shirt is draped elegantly over an invisible mannequin, set against a deep, infinite space background. The lighting highlights the vibrant neon magenta and electric purple tones of the graphic, creating a high-contrast 'Cosmic Noir' aesthetic with soft, luminous rim lights outlining the fabric's texture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl8Cxbd9VkQAvCBabBcDxvr79pg6KleXmAcS8rrnzfbWoN0D9RmsJjvuS1vrgTlGnZfRYH2nL4FMSArGf5uGbBkfn4t6nwG_RgSdSXpD8tJANJc16CcvHJCndZ6ghctztnoNJH1AZgSeJTzbxp1opxaCiyaRaGU_87k6HBDhaeYkg5A0VvnBKCmpnn6-xpi_j5zfikkxDrIqs4dql_I6b9ug1jrzYeRyjL6MMRgh8bQgrKSpzyRFOaZPz58OcQEx90EiTOF5JbGno')"></div>
+</div>
+</div>
+<!-- Product Details (Right) -->
+<div class="lg:col-span-5 flex flex-col gap-stack-lg lg:sticky lg:top-32 pt-stack-md lg:pt-0">
+<div class="flex flex-col gap-stack-sm">
+<span class="font-code-sm text-code-sm text-primary uppercase tracking-widest">Avant-Garde Streetwear</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface leading-tight">Cosmic Nomad</h1>
+<div class="text-primary-container font-headline-md text-headline-md font-bold mt-stack-sm">$85.00</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Drift through the urban expanse in a wearable fragment of deep space. Engineered from heavyweight 300gsm French Terry cotton, the Cosmic Nomad tee features a high-density, luminous print that seems to absorb light and radiate its own frequency. 
+                </p>
+<form class="flex flex-col gap-stack-md">
+<!-- Size Selection -->
+<div class="flex flex-col gap-stack-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Select Size</span>
+<a class="font-label-caps text-label-caps text-secondary underline hover:text-primary transition-colors" href="#">Size Guide</a>
+</div>
+<div class="flex flex-wrap gap-stack-sm">
+<div class="relative">
+<input class="peer sr-only radio-chip" id="size-s" name="size" type="radio"/>
+<label class="cursor-pointer px-6 py-3 rounded-full border border-outline-variant text-on-surface-variant font-code-sm text-code-sm hover:border-primary transition-colors inline-block glass-panel" for="size-s">S</label>
+</div>
+<div class="relative">
+<input checked="" class="peer sr-only radio-chip" id="size-m" name="size" type="radio"/>
+<label class="cursor-pointer px-6 py-3 rounded-full border border-outline-variant text-on-surface-variant font-code-sm text-code-sm hover:border-primary transition-colors inline-block glass-panel" for="size-m">M</label>
+</div>
+<div class="relative">
+<input class="peer sr-only radio-chip" id="size-l" name="size" type="radio"/>
+<label class="cursor-pointer px-6 py-3 rounded-full border border-outline-variant text-on-surface-variant font-code-sm text-code-sm hover:border-primary transition-colors inline-block glass-panel" for="size-l">L</label>
+</div>
+<div class="relative">
+<input class="peer sr-only radio-chip" id="size-xl" name="size" type="radio"/>
+<label class="cursor-pointer px-6 py-3 rounded-full border border-outline-variant text-on-surface-variant font-code-sm text-code-sm hover:border-primary transition-colors inline-block glass-panel" for="size-xl">XL</label>
+</div>
+</div>
+</div>
+<!-- Add to Bag Button -->
+<button class="w-full py-4 mt-stack-md bg-primary-container text-on-primary font-headline-md text-body-lg font-bold rounded-lg btn-primary-glow flex justify-center items-center gap-2" type="submit">
+<span>Add to Bag</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</button>
+</form>
+<!-- Shipping info -->
+<div class="flex items-start gap-3 mt-stack-md p-4 glass-panel rounded-lg border-t-0 border-r-0 border-b-0 border-l-2 border-l-primary">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Free Global Transmission</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-1">Orders deploy within 48 planetary hours.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The Vibe Section -->
+<section class="flex flex-col gap-stack-lg items-center relative mt-section-gap">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface text-center">The Vibe</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter w-full items-center">
+<div class="order-2 md:order-1 flex flex-col justify-center px-4 md:px-12">
+<p class="font-headline-md text-headline-md text-primary italic leading-relaxed">
+                        "Lost between the constellations, carrying the rain of a thousand worlds. The nomad doesn't seek a destination, only the beautiful drift through the void."
+                    </p>
+<span class="font-label-caps text-label-caps text-secondary mt-stack-md uppercase tracking-[0.2em]">— Archive Entry 04</span>
+</div>
+<div class="order-1 md:order-2 w-full glass-panel rounded-xl overflow-hidden p-2 luminous-shadow">
+<img class="w-full h-auto rounded-lg object-cover aspect-[4/5] md:aspect-square mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmDkQ2bcrlhISq44KUeaXxUO-wEb3XKnfxQ-vBMxiu2es1VoIqfTYdXIdYn3_jtuKvOqZeQDTcJLuMv7DuZPt-YkWVp_u-owV0HpqmI378BGnEcqo2O-W8G90yAo_u6pP59Tv-gOu5qL-X2NQglQ00s4LNNEr-DfnqdG51AOChSEz2YloYsaAUZuvKrRIuV6-klU4wz8nJtM0HDEi1nf-o_I_m9Q2epXC7PAkMgv3HqlIbHqZRJyM5He8Lp9wKT-iEzqFk1fdN10g"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-surface-container-lowest bg-surface-container-low border-t border-outline-variant/20 px-margin-mobile md:px-margin-desktop mt-auto">
+<div class="flex flex-col gap-stack-sm md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">Purple Pain Productions</span>
+<span class="font-body-md text-body-md text-secondary mt-auto pt-4 opacity-80 hover:opacity-100 transition-opacity">© 2024 Purple Pain Productions. All Rights Reserved.</span>
+</div>
+<div class="flex flex-col gap-stack-md md:col-span-3">
+<nav class="flex flex-wrap gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Shipping</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Newsletter</a>
+</nav>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Purple Pain Productions - The Art of the Surreal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Manrope:wght@400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#6a6672",
+                        "on-primary-container": "#f2e3ff",
+                        "primary-fixed-dim": "#d8b9ff",
+                        "on-tertiary": "#322f39",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-background": "#e2e2e2",
+                        "surface-bright": "#37393a",
+                        "error": "#ffb4ab",
+                        "primary": "#d8b9ff",
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary": "#450086",
+                        "on-tertiary-fixed": "#1c1a24",
+                        "primary-fixed": "#eddcff",
+                        "secondary-container": "#ff4b89",
+                        "surface-variant": "#333535",
+                        "on-secondary": "#66002c",
+                        "on-secondary-fixed": "#3f0019",
+                        "on-surface-variant": "#cec2d8",
+                        "surface": "#121414",
+                        "surface-dim": "#121414",
+                        "surface-container-low": "#1a1c1c",
+                        "tertiary": "#cac4d1",
+                        "surface-container": "#1e2020",
+                        "secondary-fixed-dim": "#ffb1c3",
+                        "secondary-fixed": "#ffd9e0",
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#8f0041",
+                        "background": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#ece5f3",
+                        "on-error": "#690005",
+                        "secondary": "#ffb1c3",
+                        "surface-container-highest": "#333535",
+                        "inverse-primary": "#8018ea",
+                        "tertiary-fixed-dim": "#cac4d1",
+                        "on-primary-fixed": "#290055",
+                        "outline-variant": "#4c4355",
+                        "surface-container-high": "#282a2b",
+                        "on-primary-fixed-variant": "#6300bb",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#484550",
+                        "tertiary-fixed": "#e6e0ee",
+                        "surface-tint": "#d8b9ff",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#590026",
+                        "primary-container": "#8b2cf5",
+                        "outline": "#978da1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "code-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "code-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0D0B14;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-panel:hover {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(216, 185, 255, 0.15);
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(216, 185, 255, 0.8), 0 0 20px rgba(216, 185, 255, 0.5);
+        }
+        .nebula-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 44, 245, 0.15) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(100px);
+            z-index: -1;
+            pointer-events: none;
+        }
+        .btn-primary {
+            background-color: #8b2cf5;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(255, 75, 137, 0.6);
+        }
+        
+        /* Starfield Animation */
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(-2000px); }
+        }
+        .starfield {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -2;
+            background: transparent url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjgib3BhY2l0eT0iMC44Ii8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMjAwIiByPSIxIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSI1MCIgcj0iMS41IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjMiLz48Y2lyY2xlIGN4PSIyNTAiIGN5PSIzNTAiIHI9IjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNiIvPjwvc3ZnPg==') repeat;
+            animation: drift 100s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative">
+<div class="starfield"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 backdrop-blur-3xl border-b border-outline-variant/30 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out">
+<div class="font-headline-md text-headline-md font-bold text-primary drop-shadow-[0_0_8px_rgba(216,185,255,0.6)]">
+            Purple Pain Productions
+        </div>
+<div class="hidden md:flex space-x-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Apparel</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md hover:bg-white/5 hover:backdrop-blur-lg px-2 rounded-DEFAULT" href="#">Games</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md hover:bg-white/5 hover:backdrop-blur-lg px-2 rounded-DEFAULT" href="#">Music</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md hover:bg-white/5 hover:backdrop-blur-lg px-2 rounded-DEFAULT" href="#">Gallery</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop text-center overflow-hidden">
+<div class="nebula-bg top-1/4 left-1/2 -translate-x-1/2"></div>
+<div class="z-10 flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-primary neon-glow mb-stack-md">The Art of the Surreal</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                    Dive into a cosmic noir experience. Explore avant-garde streetwear, mesmerizing soundscapes, and digital realms that defy reality.
+                </p>
+<button class="btn-primary px-8 py-3 rounded-full font-label-caps text-label-caps uppercase tracking-widest">Explore the Void</button>
+</div>
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-screen pointer-events-none flex justify-center items-center">
+<img class="w-full h-full object-cover object-center max-h-screen" data-alt="An astronaut floating in deep space holding a glowing purple umbrella, surrounded by a vivid starry nebula. The lighting is cinematic, highlighting the reflective visor and the surreal juxtaposition of the umbrella against the cosmos. Cosmic noir aesthetic, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmDkQ2bcrlhISq44KUeaXxUO-wEb3XKnfxQ-vBMxiu2es1VoIqfTYdXIdYn3_jtuKvOqZeQDTcJLuMv7DuZPt-YkWVp_u-owV0HpqmI378BGnEcqo2O-W8G90yAo_u6pP59Tv-gOu5qL-X2NQglQ00s4LNNEr-DfnqdG51AOChSEz2YloYsaAUZuvKrRIuV6-klU4wz8nJtM0HDEi1nf-o_I_m9Q2epXC7PAkMgv3HqlIbHqZRJyM5He8Lp9wKT-iEzqFk1fdN10g"/>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-primary text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Latest Drops (Apparel) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop relative">
+<div class="nebula-bg top-0 right-0"></div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-lg border-l-4 border-primary pl-4">Latest Drops</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="glass-panel rounded-xl overflow-hidden group cursor-pointer flex flex-col h-[500px]">
+<div class="relative flex-grow overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A model wearing an oversized, avant-garde hoodie with glowing neon purple accents in a dark, moody studio lit by stark volumetric lighting. The garment features intricate cybernetic patterns. High fashion, surreal vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJHLbA583iNgJxQbPwmham0klytl6Oa0WehG82pL3cdUuNM8FUNBUCUSbOHvUE_41ddsky8leojG5dReEKjoCEgaTbjtgxbMiOqpzFfbzmaNMQoGro89j6HwF1MBjW9EHFo-t4k3_Q2hXjjTSwA-nrNpWWWrI38myoiherbs2cCggoqFIiOdQXvfjpLn155yJTDOYh-55G7xjak64f5hAp1RNZCnoRuQGKL36ccMTUAKOEf4l5lvTGEai9TEZbc1Mc82Zhrx6NNDc"/>
+<div class="absolute top-4 left-4 bg-primary/20 backdrop-blur-md border border-primary/50 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps">Apparel</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Nebula Hoodie V2</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">$185.00</p>
+<button class="w-full py-2 border border-outline hover:border-primary text-on-surface hover:text-primary transition-colors rounded-DEFAULT font-label-caps text-label-caps uppercase">Add to Cart</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="glass-panel rounded-xl overflow-hidden group cursor-pointer flex flex-col h-[500px]">
+<div class="relative flex-grow overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, futuristic jacket displayed against a pitch-black background with subtle magenta rim lighting. The jacket has iridescent panels that catch the light, creating a holographic effect. Cosmic streetwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOPL4pQU5svt6VIePHPxS4VmhzsAPpkOkY3Yf4KWFLVoPKxcDY9roSA55u-4wytCgOTDug7uqRDoE8Kh1WGV9YjBHggL7p-u-8zYioSfw7rXiKXcsY8A3I0MK2cpnA3zAIhGLNICPQ8cTUhje2qHHrdjWxgmJj8595OogzrM6nM2JcZVhBkvwPTbM7GfBKfErhECCJiwSjjhx3UxbkBqPbf-OiJRlux_V2pFV85w9vSo1Qbw49TrYMCi6B3wcQ2_uKPdg8-vcX5q8"/>
+<div class="absolute top-4 left-4 bg-primary/20 backdrop-blur-md border border-primary/50 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps">Apparel</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Void Walker Jacket</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">$320.00</p>
+<button class="w-full py-2 border border-outline hover:border-primary text-on-surface hover:text-primary transition-colors rounded-DEFAULT font-label-caps text-label-caps uppercase">Add to Cart</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="glass-panel rounded-xl overflow-hidden group cursor-pointer flex flex-col h-[500px]">
+<div class="relative flex-grow overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-top sneakers with a translucent sole illuminated from within by a soft violet glow, resting on a reflective obsidian surface. The design is angular and aggressive, yet elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUKTY5nbWPAW-WIXlpG-TDfHcduOGBz8xF89_VlKcucwIDsK_dUdJLPo8vmgSa32xWvnCWnMXYdvjZBdejDlehtbwaYEoQY-tiK19KhDpQPQjw-PD6gbvCFxBI_FbHolSk-j2FrbO9M0q_0SM1fHuA4wWaijM6fW9-hOjBhDhM_orS4snD049963KL4SVjhkHYRf74l1_tcHhCbMRzyeJ8vYjpuyZqjdMAPXYHTAiLn_n4efNjAgQgtHMfqcODDOTU3wofb-fhDeA"/>
+<div class="absolute top-4 left-4 bg-primary/20 backdrop-blur-md border border-primary/50 text-primary px-3 py-1 rounded-full font-label-caps text-label-caps">Footwear</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Eclipse Kicks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">$250.00</p>
+<button class="w-full py-2 border border-outline hover:border-primary text-on-surface hover:text-primary transition-colors rounded-DEFAULT font-label-caps text-label-caps uppercase">Add to Cart</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-surface-container-lowest bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-primary mb-4">Purple Pain Productions</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 transition-opacity">© 2024 Purple Pain Productions. All Rights Reserved.</p>
+</div>
+<div class="col-span-1 flex flex-col space-y-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Shipping</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Newsletter</a>
+<div class="flex">
+<input class="bg-surface border border-outline focus:border-primary text-on-surface rounded-l-DEFAULT px-4 py-2 w-full font-code-sm text-code-sm placeholder:font-code-sm" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-r-DEFAULT hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>
