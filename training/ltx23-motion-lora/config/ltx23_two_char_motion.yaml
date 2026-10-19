@@ -1,0 +1,96 @@
+# LTX-2.3 concept LoRA: fast two-character interaction (positions, contact, pace).
+# Keys checked against ostris/ai-toolkit main (Oct 2026). Paste into the UI's
+# "Advanced" YAML view, or run: python run.py <this file>
+job: extension
+config:
+  name: ltx23_two_char_motion_v1
+  process:
+    - type: diffusion_trainer
+      training_folder: /workspace/output
+      device: cuda
+      # replaces [trigger] in captions; prepended automatically if a caption lacks it
+      trigger_word: ppclash
+      performance_log_every: 10
+      network:
+        type: lora
+        linear: 32
+        linear_alpha: 32
+        network_kwargs:
+          # keep the LoRA off the audio stream and audio<->video cross-attention.
+          # The dataset is trained silent (do_audio: false), so this stops the
+          # LoRA from drifting the model's audio.
+          ignore_if_contains:
+            - audio
+      save:
+        dtype: bf16
+        save_every: 250
+        max_step_saves_to_keep: 8
+      datasets:
+        - folder_path: /workspace/datasets/two_char_motion
+          caption_ext: txt
+          caption_dropout_rate: 0.05
+          cache_latents_to_disk: true
+          resolution: [512, 768]
+          # every clip is pre-cut to exactly 49 frames @ 24 fps (~2.0 s) by
+          # scripts/prep_clips.sh, so shrink_video_to_frames never time-compresses
+          # a clip. A clip longer than num_frames would be sampled sparsely and
+          # play back faster, which breaks the pace this LoRA is meant to learn.
+          num_frames: 49
+          shrink_video_to_frames: true
+          # must match the real clip fps: LTX conditions on frame rate
+          fps: 24
+          auto_frame_count: false
+          do_audio: false
+          do_i2v: false
+          num_repeats: 1
+      train:
+        batch_size: 1
+        steps: 3000
+        gradient_accumulation: 1
+        train_unet: true
+        train_text_encoder: false
+        gradient_checkpointing: true
+        noise_scheduler: flowmatch
+        timestep_type: weighted
+        content_or_style: balanced
+        optimizer: adamw8bit
+        # written as a decimal on purpose: YAML reads 1e-4 as a string
+        lr: 0.0001
+        optimizer_params:
+          weight_decay: 0.0001
+        dtype: bf16
+        ema_config:
+          use_ema: false
+        skip_first_sample: false
+        disable_sampling: false
+      model:
+        arch: ltx2.3
+        name_or_path: Lightricks/LTX-2.3/ltx-2.3-22b-dev.safetensors
+        quantize: true
+        qtype: qfloat8
+        quantize_te: true
+        qtype_te: qfloat8
+        # 48 GB cards: set low_vram and layer_offloading to true (slower)
+        low_vram: false
+        layer_offloading: false
+      sample:
+        sampler: flowmatch
+        sample_every: 250
+        width: 768
+        height: 512
+        num_frames: 49
+        fps: 24
+        guidance_scale: 3.0
+        sample_steps: 25
+        seed: 42
+        walk_seed: false
+        neg: ""
+        samples:
+          # unseen setting and characters: tests that the motion generalizes
+          - prompt: "[trigger] wide shot, a woman in a yellow raincoat on the left lunges and shoves a man in a grey suit on the right, he stumbles backward two steps in under a second, empty parking garage, handheld camera"
+          # close contact and pace
+          - prompt: "[trigger] medium shot, two dancers face each other at center frame, the taller one on the right spins the other under her arm in one fast motion, then both freeze, studio with a black backdrop"
+          # swapped positions to check left/right control
+          - prompt: "[trigger] full body shot, a boxer in red trunks on the right throws a quick jab-cross combination, the boxer in blue trunks on the left slips the first punch and blocks the second, boxing ring, overhead lights"
+          # a slower beat, to check the LoRA doesn't force everything fast
+          - prompt: "[trigger] medium shot, two old friends on a park bench, the man on the left slowly turns and hands a coffee cup to the woman on the right, she takes it, morning light"
